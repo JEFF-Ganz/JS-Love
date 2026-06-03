@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story - Jefrin & Suci</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">JS ❤️</div>
+            <p class="loading-text">Loading Our Love Story...</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" id="floating-hearts"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Music Player -->
+    <div class="music-player" id="music-player">
+        <div class="music-toggle" id="music-toggle">
+            <i class="fas fa-music"></i>
+        </div>
+        <audio id="bg-music" loop>
+            <source src="assets/audio/Ella Fitzgerald - Misty (Karaoke Version) - Sing King.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" style="display: none;">
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Jefrin <span class="heart-icon">❤️</span> Suci
+                    </h1>
+                    <p class="hero-subtitle">
+                        Dua hati, satu cerita, dan ribuan kenangan yang terus bertambah setiap hari.
+                    </p>
+                    <div class="typing-container">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#opening" class="btn btn-primary">
+                            <i class="fas fa-heart"></i> Mulai Perjalanan Kita
+                        </a>
+                        <a href="#gallery" class="btn btn-secondary">
+                            <i class="fas fa-camera"></i> Lihat Kenangan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opening Letter -->
+        <section id="opening" class="section">
+            <div class="container">
+                <div class="glass-card letter-card">
+                    <div class="letter-header">
+                        <i class="fas fa-envelope-open"></i>
+                        <h2>Surat Cinta</h2>
+                    </div>
+                    <div class="letter-content">
+                        <p>Hai Ayangku Suci,</p>
+                        <p>Website ini adalah tempat kecil yang aku buat khusus untukmu.</p>
+                        <p>Di dalamnya tersimpan cerita, kenangan, tawa, dan perjalanan yang telah kita lalui bersama.</p>
+                        <p>Mungkin ini hanya kumpulan kode HTML, CSS, dan JavaScript.</p>
+                        <p>Tetapi di balik setiap barisnya ada waktu, usaha, dan perasaan yang aku sisipkan untukmu.</p>
+                        <p>Karena bagiku, kamu bukan sekadar bagian dari cerita.</p>
+                        <p>Kamu adalah alasan cerita itu begitu berarti.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Counter -->
+        <section id="counter" class="section">
+            <div class="container">
+                <h2 class="section-title">Kita Sudah Bersama Selama</h2>
+                <div class="counter-container">
+                    <div class="counter-box">
+                        <div class="counter-value" id="days">0</div>
+                        <div class="counter-label">Hari</div>
+                    </div>
+                    <div class="counter-box">
+                        <div class="counter-value" id="hours">0</div>
+                        <div class="counter-label">Jam</div>
+                    </div>
+                    <div class="counter-box">
+                        <div class="counter-value" id="minutes">0</div>
+                        <div class="counter-label">Menit</div>
+                    </div>
+                    <div class="counter-box">
+                        <div class="counter-value" id="seconds">0</div>
+                        <div class="counter-label">Detik</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline" class="section">
+            <div class="container">
+                <h2 class="section-title">Cerita Kita</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">💌</div>
+                        <div class="timeline-content glass-card">
+                            <h3>Pertama Kenal</h3>
+                            <p>Hari pertama kita kenalan yaitu lewat whatsapp dan mulai mengenal satu sama lain disitu.</p>
+                            <span class="timeline-date">Tanggal: 30 September 2025</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-icon">📱</div>
+                        <div class="timeline-content glass-card">
+                            <h3>Pertama Chat Lebih dekat</h3>
+                            <p>Mulai berkomunikasi dan saling mengenal lebih dalam.</p>
+                            <span class="timeline-date">Tanggal: 30 September 2025</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">🥰</div>
+                        <div class="timeline-content glass-card">
+                            <h3>Mulai Jadian</h3>
+                            <p>Hari ketika kita resmi menjadi sepasang kekasih.</p>
+                            <span class="timeline-date">Tanggal: 21 Mei 2026</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-icon">🎂</div>
+                        <div class="timeline-content glass-card">
+                            <h3>Ulang Tahun Bersama</h3>
+                            <p>Merayakan hari spesial bersama untuk pertama kalinya.</p>
+                            <span class="timeline-date">Masih Proses Berlangsung</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">🎉</div>
+                        <div class="timeline-content glass-card">
+                            <h3>Anniversary</h3>
+                            <p>Merayakan satu tahun perjalanan cinta kita.</p>
+                            <span class="timeline-date">Masih Proses Berlangsung</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="section-title">Galeri Kenangan</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0">
+                        <img src="assets/images/fisrt-Foto.jpeg" alt="Memory 1">
+                        <div class="gallery-overlay">
+                            <p>Foto Kita Pertama Sayanggggg</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="1">
+                        <img src="assets/images/mpn2.jpeg" alt="Memory 2">
+                        <div class="gallery-overlay">
+                            <p>Bersamamu Di Museum</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="2">
+                        <img src="assets/images/momoyo1.jpeg" alt="Memory 3">
+                        <div class="gallery-overlay">
+                            <p>Happy Moment</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="3">
+                        <img src="assets/images/momoyo2.jpeg" alt="Memory 4">
+                        <div class="gallery-overlay">
+                            <p>Our Day</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="4">
+                        <img src="assets/images/momoyo3.jpeg" alt="Memory 5">
+                        <div class="gallery-overlay">
+                            <p>Love Story</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="5">
+                        <img src="assets/images/alun2.jpeg" alt="Memory 6">
+                        <div class="gallery-overlay">
+                            <p>Forever Us</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="6">
+                        <img src="assets/images/momoyo4.jpeg" alt="Memory 7">
+                        <div class="gallery-overlay">
+                            <p>Special Day</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="7">
+                        <img src="assets/images/mpn4.jpeg" alt="Memory 8">
+                        <div class="gallery-overlay">
+                            <p>Together</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="8">
+                        <img src="assets/images/mpn3.jpeg" alt="Memory 9">
+                        <div class="gallery-overlay">
+                            <p>Our Adventure</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="9">
+                        <img src="assets/images/mpn2.jpeg" alt="Memory 10">
+                        <div class="gallery-overlay">
+                            <p>Kenangan Indah Pertama Di Momoyo</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="10">
+                        <img src="assets/images/mpn1.jpeg" alt="Memory 11">
+                        <div class="gallery-overlay">
+                            <p>With You</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="11">
+                        <img src="assets/images/alun1.jpeg" alt="Memory 12">
+                        <div class="gallery-overlay">
+                            <p>Always Together</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <span class="lightbox-close">&times;</span>
+                <img id="lightbox-img" src="" alt="">
+                <p id="lightbox-caption"></p>
+            </div>
+        </div>
+
+        <!-- Reasons -->
+        <section id="reasons" class="section">
+            <div class="container">
+                <h2 class="section-title">100 Alasan Aku Mencintaimu</h2>
+                <div class="reasons-grid" id="reasons-grid">
+                    <!-- Reasons will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Secret Letter -->
+        <section id="secret-letter" class="section">
+            <div class="container">
+                <h2 class="section-title">Surat Rahasia</h2>
+                <div class="envelope-container" id="envelope-container">
+                    <div class="envelope" id="envelope">
+                        <div class="envelope-heart">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="secret-letter-content" id="secret-letter-content" style="display: none;">
+                    <div class="glass-card">
+                        <h3>Untuk Ayangku Tercinta,</h3>
+                        <div class="letter-body">
+                            <p>Saat pertama kali aku melihatmu, aku tahu ada sesuatu yang berbeda tentangmu.</p>
+                            <p>Tidak hanya keindahanmu yang memikat hatiku, tapi juga hatimu yang penuh kasih.</p>
+                            <p>Setiap hari bersamamu adalah anugerah yang tak ternilai harganya.</p>
+                            <p>Kamu telah mengubah hidupku menjadi lebih berwarna dan berarti.</p>
+                            <p>Aku bersyukur kepada Tuhan karena telah mempertemukan kita.</p>
+                            <p>Aku mencintaimu tidak hanya karena siapa kamu, tapi juga karena siapa aku saat bersamamu.</p>
+                            <p>Semoga cinta kita terus tumbuh dan abadi selamanya.</p>
+                        </div>
+                        <p class="letter-sign-off">Dengan sepenuh hati,</p>
+                        <p class="letter-sender">Jefrin Telaumbanua ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Playlist -->
+        <section id="playlist" class="section">
+            <div class="container">
+                <h2 class="section-title">Playlist Kita</h2>
+                <div class="playlist-container">
+                    <div class="playlist-card glass-card">
+                        <div class="playlist-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Lagu Favorit Ayangggg</h3>
+                        <p>Lagu Kesukaan Ayangggggg.</p>
+                    </div>
+                    <div class="playlist-card glass-card">
+                        <div class="playlist-icon">
+                            <i class="fas fa-compact-disc"></i>
+                        </div>
+                        <h3>Lagu Favorit Abangggg</h3>
+                        <p>Lagu Kesukaan Abangggggg juga Nih sayanggg.</p>
+                    </div>
+                    <div class="playlist-card glass-card">
+                        <div class="playlist-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Lagu Kita Berdua</h3>
+                        <p>Lagu yang selalu kita bersama.</p>   
+                    </div>
+                    <div class="playlist-card glass-card">
+                        <div class="playlist-icon">
+                            <i class="fas fa-future"></i>
+                        </div>
+                        <h3>Lagu Untuk Masa Depan</h3>
+                        <p>Lagu untuk impian kita bersama.</p>
+                    </div>
+                </div>
+                <div class="audio-player">
+                    <audio id="playlist-audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+                    <div class="player-controls">
+                        <button id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                        <button id="play-btn"><i class="fas fa-play"></i></button>
+                        <button id="next-btn"><i class="fas fa-step-forward"></i></button>
+                    </div>
+                    <div class="player-info">
+                        <p id="current-song">Lagu Favorit Kita</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Dreams -->
+        <section id="future" class="section">
+            <div class="container">
+                <h2 class="section-title">Masa Depan Kita</h2>
+                <div class="dreams-grid">
+                    <div class="dream-card glass-card">
+                        <div class="dream-icon">🎓</div>
+                        <h3>Wisuda Bersama</h3>
+                        <p>Meraih impian pendidikan bersama-sama.</p>
+                    </div>
+                    <div class="dream-card glass-card">
+                        <div class="dream-icon">✈️</div>
+                        <h3>Traveling Bersama</h3>
+                        <p>Menjelajahi dunia dan menciptakan kenangan.</p>
+                    </div>
+                    <div class="dream-card glass-card">
+                        <div class="dream-icon">🏡</div>
+                        <h3>Rumah Impian</h3>
+                        <p>Memiliki tempat tinggal yang penuh cinta.</p>
+                    </div>
+                    <div class="dream-card glass-card">
+                        <div class="dream-icon">💍</div>
+                        <h3>Masa Depan Kita</h3>
+                        <p>Menikah dan hidup bahagia selamanya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memory Wall -->
+        <section id="memory-wall" class="section">
+            <div class="container">
+                <h2 class="section-title">Memory Wall</h2>
+                <div class="sticky-notes">
+                    <div class="sticky-note note-pink">
+                        <h4>Kenangan Lucu</h4>
+                        <p>Ketika kamu dan aku tertawa bersama melihat video lucuww.</p>
+                    </div>
+                    <div class="sticky-note note-blue">
+                        <h4>Cerita Favorit</h4>
+                        <p>Malam pertama kita berjalan-jalan di bawah bintang-bintang di Alun Alun.</p>
+                    </div>
+                    <div class="sticky-note note-purple">
+                        <h4>Momen Tak Terlupakan</h4>
+                        <p>Ketika Kamu mengatakan "aku juga mencintaimu" untuk pertama kalinya.</p>
+                    </div>
+                    <div class="sticky-note note-pink">
+                        <h4>Happy Moment</h4>
+                        <p>Setiap hari bersamamu adalah kebahagiaan yang tak terduga bagiku sayanggg.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Messages -->
+        <section id="love-messages" class="section">
+            <div class="container">
+                <div class="message-container glass-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="love-message" id="love-message">Terima kasih sudah hadir dalam hidupku.</p>
+                    <i class="fas fa-quote-right quote-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Surprise Section -->
+        <section id="surprise" class="section">
+            <div class="container">
+                <div class="surprise-container">
+                    <button class="surprise-btn" id="surprise-btn">
+                        🎁 Klik Jika Kamu Sayang Aku
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Surprise Popup -->
+        <div id="surprise-popup" class="popup">
+            <div class="popup-content glass-card">
+                <h2>Aku Mencintaimu!</h2>
+                <p>Aku mencintaimu hari ini, besok, dan seterusnya.</p>
+                <p>Terima kasih sudah menjadi bagian terindah dalam hidupku.</p>
+                <p>Aku, Jefrin Telaumbanua, akan selalu memilihmu.</p>
+                <button class="close-popup" id="close-popup">❤️</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="section">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">JS ❤️</div>
+                    <p class="footer-text">Made with ❤️ by Jefrin Telaumbanua</p>
+                    <p class="footer-for">For: Suci Theresia Sridevi Sitanggang</p>
+                    <div class="social-links">
+                        <a href="klik.html" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="klik.html" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="klik.html" class="social-link" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="klik.html" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
